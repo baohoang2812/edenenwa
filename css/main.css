@@ -3,48 +3,52 @@
 
 .content {
   background-color: white;
-  width: 1440px;
+  width: 100%;
   height: 810px;
   position: fixed;
-	
 }
-.header
-{
-	
-	width: 1440px;
-	height: 50px;
-	 z-index: -1;	
-	background-color: white;
-	
+.header {
+  width: 100%;
+  height: 50px;
+  z-index: -1;
+  background-color: white;
 }
 
-
-/*
-.body
-{
-	margin-top: 20px;
-	margin-left: 40px;
-	
-	width: 1371px;
-	height: 626px;
-	 z-index: -1;	
-	background-color: red;
-	background-image: url("../image/h.png");
-	
-}*/
 body {
   font-family: "montserrat";
-	
+}
+#slide_1 {
+  background-image: url('../image/slide_show_1.png');
+  background-repeat: no-repeat;
+}
+#slide_1:hover{
+  background-image: url('../image/slide_show_1_hover.jpg');
+  transition: ease-in-out;
+  transition-duration: 1s;
 }
 
+#slide_2 {
+  background-image: url('../image/slide_show_2.jpg');
+  background-repeat: no-repeat;
+}
+#slide_3 {
+  background-image: url('../image/slide_show_3.jpg');
+  background-repeat: no-repeat;
+}
 
+.menu-icon{
+  position: relative;
+  z-index: 99;
+  left: 35px;
+  top: 300px;
+}
 
-.sidenav {
-  height: 100%;
+.side-nav {
+  height: inherit;
   width: 0;
   position: fixed;
-  z-index: 1;
-  top: 78px;
+  z-index: 100;
+  top: 14%;
   left: 0;
   background-color: white;
   overflow-x: hidden;
@@ -52,7 +56,7 @@ body {
   padding-top: 200px;
 }
 
-.sidenav a {
+.side-nav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -61,11 +65,11 @@ body {
   transition: 0.3s;
 }
 
-.sidenav a:hover {
+.side-nav a:hover {
   color: #f1f1f1;
 }
 
-.sidenav .closebtn {
+.side-nav .close-btn {
   position: absolute;
   top: 0;
   right: 25px;
@@ -74,20 +78,31 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .side-nav {
+    padding-top: 15px;
+  }
+  .side-nav a {
+    font-size: 18px;
+  }
 }
 
+.header-content {
+  width: 45%;
+  height: 50px;
+  background-color: white;
+  float: left;
+  padding: 0 10px 0 30px;
+}
 
-.content2
-{
-	width:640px;
-	height: 50px;
-	background-color: white;
-	float: left;
-    padding: 0 10px 0 30px;
-	
-	
+#logo{
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+#search-bar{
+  padding-top:50px;
+  text-align: right;
+  text-transform: uppercase;
 }
 
 .container {
@@ -110,8 +125,8 @@ body {
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
+  transition: 0.5s ease;
+  background-color: #008cba;
 }
 
 .container:hover .overlay {
@@ -130,31 +145,17 @@ body {
   text-align: center;
 }
 
-
 .card {
-        margin-top: 20px;
-	margin-left: 40px;
-	
-	width: 1371px;
-	height: 626px;
-	 z-index: -1;	
-	background-color: red;
-	background: url("../image/h.png");
-	
-    }
-    .card:hover {
-        background: url("../image/transition-01-01.jpg");
-		transition: 1s;
-    }
+  margin-top: 20px;
+  margin-left: 40px;
 
-
-
-
-
-
-
-
-
-
-
-
+  width: 1371px;
+  height: 626px;
+  z-index: -1;
+  background-color: red;
+  /* background: url("../image/h.png"); */
+}
+.card:hover {
+  background: url("../image/transition-01-01.jpg");
+  transition: 1s;
+}
