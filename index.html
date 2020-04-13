@@ -19,7 +19,11 @@
           <img src="image/Enwa Logo-03.png" height="50" width="65" />
         </div>
         <div class="header-content" id="search-bar">
-          <h2>Search | <i class="fas fa-search"></i></h2>
+          <h2>
+            <label class="search" for="input_search">
+              <input id="input_search" type="text" />
+            </label>
+          </h2>
         </div>
       </div>
       <div id="mySidenav" class="side-nav">
@@ -30,13 +34,13 @@
         <a href="#">Blog</a>
         <a href="#">About us</a>
         <a href="#">Contact us</a>
-        <a href="#"><img src="image/shop icon-01.jpg" height="30"/></a>
+        <a href="#"><img src="image/shop icon-01.jpg" height="30" /></a>
       </div>
       <a class="menu-icon">
         <img
           src="./image/hamburger_icon.png"
-          width="100px"
-          height="70px"
+          width="170px"
+          height="100px"
           onmouseover="openNav()"
         />
       </a>
@@ -80,7 +84,6 @@
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
     crossorigin="anonymous"
   ></script>
-  <script src="https://kit.fontawesome.com/3603df1bf6.js" crossorigin="anonymous"></script>
   <script src="./javascript/index.js"></script>
   <script>
     function openNav() {
@@ -90,5 +93,13 @@
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
     }
+    $("#input_search").on("focus", function () {
+      $(this).parent("label").addClass("active");
+    });
+
+    $("#input_search").on("blur", function () {
+      if ($(this).val().length == 0)
+        $(this).parent("label").removeClass("active");
+    });
   </script>
 </html>
